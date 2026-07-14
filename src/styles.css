@@ -1,0 +1,280 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * TROIS GLAZE — design system.
+ * Palette: Deep Green #0F3E2E, Luxury Gold #C9A34E, Charcoal #1B1B1B, White.
+ * Fonts: Montserrat (display + body) — loaded via <link> in __root.tsx.
+ */
+
+@theme inline {
+  --font-sans: "Montserrat", system-ui, sans-serif;
+  --font-display: "Montserrat", system-ui, sans-serif;
+
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-surface: var(--surface);
+  --color-navy: var(--navy);
+  --color-navy-foreground: var(--navy-foreground);
+  --color-navy-light: var(--navy-light);
+  --color-brand: var(--brand);
+  --color-cyan: var(--cyan);
+  --color-gold: var(--gold);
+  --color-gold-foreground: var(--gold-foreground);
+}
+
+:root {
+  --radius: 0.25rem;
+
+  /* Brand — Dark Teal Green + Blue Shades + Luxury Gold */
+  --navy: oklch(0.28 0.07 175);             /* Dark teal green */
+  --navy-foreground: oklch(0.98 0.005 100);
+  --navy-light: oklch(0.60 0.08 245);      /* Blue shade accent */
+  --brand: oklch(0.28 0.07 175);             /* Dark teal green (primary) */
+  --gold: oklch(0.78 0.13 82);             /* Luxury gold */
+  --gold-foreground: oklch(0.2 0.02 100);
+  --cyan: oklch(0.60 0.08 245);              /* Blue shade alias */
+
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.18 0.01 100);       /* charcoal #1B1B1B */
+  --surface: oklch(0.98 0.005 90);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.01 100);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.01 100);
+
+  --primary: var(--navy);
+  --primary-foreground: var(--navy-foreground);
+  --secondary: oklch(0.97 0.008 90);
+  --secondary-foreground: var(--navy);
+  --muted: oklch(0.96 0.006 90);
+  --muted-foreground: oklch(0.45 0.01 100);
+  --accent: var(--gold);
+  --accent-foreground: var(--gold-foreground);
+  --destructive: oklch(0.58 0.24 27);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.9 0.008 90);
+  --input: oklch(0.9 0.008 90);
+  --ring: var(--gold);
+
+  --gradient-hero: linear-gradient(90deg, color-mix(in oklab, var(--navy) 90%, transparent) 0%, color-mix(in oklab, var(--navy) 60%, transparent) 40%, color-mix(in oklab, var(--navy) 20%, transparent) 65%, transparent 80%);
+  --gradient-brand: linear-gradient(135deg, var(--navy), var(--navy-light) 60%, var(--gold));
+  --gradient-gold: linear-gradient(135deg, oklch(0.82 0.11 85), var(--gold) 55%, oklch(0.6 0.11 78));
+  --gradient-glow: radial-gradient(circle at 30% 20%, color-mix(in oklab, var(--navy-light) 25%, transparent) 0%, transparent 60%);
+
+  --shadow-glass: 0 8px 32px -8px oklch(0.28 0.07 175 / 0.18), 0 2px 8px -4px oklch(0.28 0.07 175 / 0.1);
+  --shadow-lift: 0 20px 40px -20px oklch(0.28 0.07 175 / 0.35);
+  --shadow-glow: 0 0 40px -8px color-mix(in oklab, var(--navy-light) 50%, transparent);
+  --shadow-gold: 0 10px 30px -10px oklch(0.74 0.12 82 / 0.45);
+}
+
+.dark {
+  --background: oklch(0.15 0.02 175);
+  --foreground: oklch(0.98 0.005 90);
+  --surface: oklch(0.18 0.03 175);
+  --card: oklch(0.18 0.03 175);
+  --card-foreground: oklch(0.98 0.005 90);
+  --popover: oklch(0.18 0.03 175);
+  --popover-foreground: oklch(0.98 0.005 90);
+  --primary: oklch(0.98 0.005 90);
+  --primary-foreground: var(--navy);
+  --secondary: oklch(0.22 0.04 175);
+  --secondary-foreground: oklch(0.98 0.005 90);
+  --muted: oklch(0.22 0.04 175);
+  --muted-foreground: oklch(0.7 0.02 100);
+  --accent: var(--gold);
+  --accent-foreground: var(--gold-foreground);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: var(--gold);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.015em;
+  }
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+@utility glass-card {
+  background: color-mix(in oklab, white 70%, transparent);
+  backdrop-filter: blur(16px) saturate(140%);
+  border: 1px solid color-mix(in oklab, white 40%, transparent);
+  box-shadow: var(--shadow-glass);
+}
+
+@utility glass-dark {
+  background: color-mix(in oklab, var(--navy) 55%, transparent);
+  backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid color-mix(in oklab, white 15%, transparent);
+}
+
+@utility gradient-text {
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility gold-text {
+  color: var(--gold);
+}
+
+@utility container-narrow {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+@media (min-width: 768px) {
+  .container-narrow { padding-inline: 2rem; }
+}
+
+@utility hover-lift {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s;
+}
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lift);
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+@utility animate-float {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+@keyframes slide-in-left {
+  from { opacity: 0; transform: translateX(-80px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@utility animate-slide-in-left {
+  animation: slide-in-left 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@utility animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@utility reveal-up {
+  animation: reveal-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@utility animate-fade-in-up {
+  animation: fade-in-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Image zoom on hover for any wrapper with .zoom-img */
+@utility zoom-img {
+  overflow: hidden;
+}
+.zoom-img img {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
+}
+.zoom-img:hover img {
+  transform: scale(1.06);
+  filter: saturate(1.1);
+}
+
+/* Elegant underline for inline links */
+@utility story-link {
+  position: relative;
+  display: inline-block;
+}
+.story-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.story-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Soft press hover for buttons and interactive cards */
+@utility press {
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+.press:hover { transform: translateY(-2px); }
+.press:active { transform: translateY(0); }
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
