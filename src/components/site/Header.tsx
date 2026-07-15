@@ -29,8 +29,10 @@ export function Header() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-all duration-500 bg-sky text-navy border-b border-sky-200",
-        scrolled ? "shadow-md" : "shadow-sm",
+        "fixed inset-x-0 top-0 z-50 transition-all duration-500 text-navy-foreground",
+        scrolled
+          ? "bg-navy/95 backdrop-blur-md border-b border-navy-foreground/10 shadow-md"
+          : "bg-transparent",
       )}
     >
       <div className="container-narrow flex h-24 items-center justify-between md:h-32">
@@ -43,22 +45,22 @@ export function Header() {
             height={112}
           />
           <div className="flex flex-col leading-none">
-            <span className="font-display font-bold text-2xl md:text-4xl tracking-[0.15em] text-navy whitespace-nowrap">
+            <span className="font-display font-bold text-2xl md:text-4xl tracking-[0.15em] text-navy-foreground whitespace-nowrap">
               TROIS GLAZE
             </span>
-            <span className="text-[9px] md:text-[11px] font-medium tracking-[0.25em] mt-1 pl-3 text-foreground">
+            <span className="text-[7px] md:text-[9px] font-medium tracking-[0.25em] mt-0.5 pl-3 text-navy-foreground/80">
               FACADE | FENESTRATION | LOUVRES
             </span>
           </div>
         </Link>
 
 
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden lg:flex items-center gap-1 bg-navy/30 backdrop-blur-md px-2 py-1.5 rounded-full border border-navy-foreground/20">
           {NAV.map((item) => (
             <Link
               key={item.to}
               to={item.to}
-              className="relative px-3 py-2 font-medium transition-colors rounded-md text-sm text-navy/80 hover:text-navy"
+              className="relative px-3 py-1.5 font-medium transition-colors rounded-md text-sm text-navy-foreground/90 hover:text-navy-foreground"
               activeProps={{ className: "!text-gold" }}
               activeOptions={{ exact: item.to === "/" }}
             >
@@ -70,7 +72,7 @@ export function Header() {
         <div className="hidden lg:flex items-center gap-3">
           <a
             href="tel:+919820618036"
-            className="flex items-center gap-2 text-sm font-medium transition-colors text-navy/80 hover:text-navy"
+            className="flex items-center gap-2 text-sm font-medium transition-colors text-navy-foreground/80 hover:text-navy-foreground"
           >
             <Phone className="size-4" />
             <span>+91 98206 18036</span>
@@ -82,7 +84,7 @@ export function Header() {
 
         <button
           onClick={() => setOpen((s) => !s)}
-          className="lg:hidden grid size-10 place-items-center rounded-md text-navy hover:bg-navy/10"
+          className="lg:hidden grid size-10 place-items-center rounded-md text-navy-foreground hover:bg-navy-foreground/10"
           aria-label={open ? "Close menu" : "Open menu"}
         >
           {open ? <X className="size-5" /> : <Menu className="size-5" />}
@@ -90,14 +92,14 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="lg:hidden border-t border-sky-200 bg-sky backdrop-blur-xl">
+        <div className="lg:hidden border-t border-navy-foreground/15 bg-navy/95 backdrop-blur-xl">
           <nav className="container-narrow flex flex-col py-4">
             {NAV.map((item) => (
               <Link
                 key={item.to}
                 to={item.to}
                 onClick={() => setOpen(false)}
-                className="py-3 text-base font-medium text-navy/80 hover:text-navy"
+                className="py-3 text-base font-medium text-navy-foreground/90 hover:text-navy-foreground"
                 activeProps={{ className: "!text-gold" }}
                 activeOptions={{ exact: item.to === "/" }}
               >

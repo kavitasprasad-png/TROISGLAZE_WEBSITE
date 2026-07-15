@@ -239,7 +239,6 @@ function Home() {
             <Button asChild size="lg" className="bg-gold hover:bg-gold/90 text-gold-foreground font-semibold h-12 px-8 rounded-sm">
               <Link to="/contact">Request a Quote <ArrowRight className="ml-1.5 size-4" /></Link>
             </Button>
-           
           </div>
         </div>
       </section>

@@ -56,10 +56,10 @@
   --radius: 0.25rem;
 
   /* Brand — Dark Teal Green + Blue Shades + Luxury Gold */
-  --navy: oklch(0.28 0.07 175);             /* Dark teal green */
+  --navy: oklch(from #054b4c l c h);       /* Dark teal green from reference image */
   --navy-foreground: oklch(0.98 0.005 100);
   --navy-light: oklch(0.60 0.08 245);      /* Blue shade accent */
-  --brand: oklch(0.28 0.07 175);             /* Dark teal green (primary) */
+  --brand: var(--navy);                      /* Dark teal green (primary) */
   --gold: oklch(0.78 0.13 82);             /* Luxury gold */
   --gold-foreground: oklch(0.2 0.02 100);
   --cyan: oklch(0.60 0.08 245);              /* Blue shade alias */

@@ -384,9 +384,6 @@ function Quality() {
             <Button asChild size="lg" className="bg-gold hover:bg-gold/90 text-gold-foreground font-semibold h-12 px-8 rounded-sm">
               <Link to="/contact">Request a Quote <ArrowRight className="ml-1.5 size-4" /></Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="h-12 px-8 border-navy text-navy hover:bg-navy hover:text-navy-foreground rounded-sm">
-              <Link to="/projects">View Projects</Link>
-            </Button>
           </div>
         </div>
       </section>

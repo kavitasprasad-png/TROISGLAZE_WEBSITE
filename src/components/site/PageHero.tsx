@@ -11,7 +11,7 @@ type Props = {
 
 export function PageHero({ eyebrow, title, description, children, image, imageAlt }: Props) {
   return (
-    <section className="relative pt-32 md:pt-40 pb-16 md:pb-20 overflow-hidden text-navy-foreground" style={{ background: "linear-gradient(135deg, var(--navy) 0%, color-mix(in oklab, var(--navy) 75%, var(--navy-light)) 55%, var(--navy-light) 100%)" }}>
+    <section className="relative overflow-hidden text-navy-foreground" style={{ background: "linear-gradient(135deg, var(--navy) 0%, color-mix(in oklab, var(--navy) 75%, var(--navy-light)) 55%, var(--navy-light) 100%)" }}>
       <div className="absolute inset-0 opacity-60" style={{ background: "var(--gradient-glow)" }} />
       <div
         className="absolute inset-0 opacity-[0.06]"
@@ -22,7 +22,7 @@ export function PageHero({ eyebrow, title, description, children, image, imageAl
         }}
       />
       {image && (
-        <div className="pointer-events-none absolute inset-y-0 right-0 hidden md:block w-[55%] lg:w-[52%]">
+        <div className="pointer-events-none absolute inset-0 md:inset-y-0 md:right-0 md:left-auto w-full md:w-[55%] lg:w-[52%]">
           <img
             src={image}
             alt={imageAlt ?? ""}
@@ -30,7 +30,14 @@ export function PageHero({ eyebrow, title, description, children, image, imageAl
             loading="lazy"
           />
           <div
-            className="absolute inset-0"
+            className="absolute inset-0 md:hidden"
+            style={{
+              background:
+                "linear-gradient(to bottom, var(--navy) 0%, color-mix(in oklab, var(--navy) 75%, transparent) 45%, color-mix(in oklab, var(--navy) 55%, transparent) 70%, transparent 100%)",
+            }}
+          />
+          <div
+            className="absolute inset-0 hidden md:block"
             style={{
               background:
                 "linear-gradient(to right, var(--navy) 0%, color-mix(in oklab, var(--navy) 45%, transparent) 18%, color-mix(in oklab, var(--navy-light) 15%, transparent) 50%, transparent 100%)",
@@ -38,10 +45,10 @@ export function PageHero({ eyebrow, title, description, children, image, imageAl
           />
         </div>
       )}
-      <div className="container-narrow relative">
+      <div className="container-narrow relative pt-32 md:pt-40 pb-16 md:pb-20">
         {eyebrow && (
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-dark text-sm font-medium tracking-wider uppercase text-cyan mb-5">
-            <span className="size-1.5 rounded-full bg-cyan" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-dark text-sm font-medium tracking-wider uppercase text-gold mb-5">
+            <span className="size-1.5 rounded-full bg-gold" />
             {eyebrow}
           </div>
         )}
