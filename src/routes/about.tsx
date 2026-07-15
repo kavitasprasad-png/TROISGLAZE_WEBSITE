@@ -85,7 +85,7 @@ function About() {
       {/* OUR COMMITMENT */}
       <section className="py-24 md:py-32 bg-surface">
         <div className="container-narrow">
-          <SectionHeader eyebrow="Our Commitment" title="What sets Trois Glaze apart" />
+          <SectionHeader eyebrow="Our Commitment"/>
           <div className="mt-16 max-w-4xl mx-auto space-y-6">
             {commitments.map((c) => (
               <div key={c.t} className="flex gap-6 items-start p-6 bg-card border-l-4 border-gold hover:shadow-lift transition-shadow">
