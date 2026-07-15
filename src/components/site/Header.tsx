@@ -29,43 +29,36 @@ export function Header() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-all duration-500",
-        scrolled
-          ? "bg-background/90 backdrop-blur-xl border-b border-border shadow-sm text-foreground"
-          : "bg-transparent text-white",
+        "fixed inset-x-0 top-0 z-50 transition-all duration-500 bg-sky text-navy border-b border-sky-200",
+        scrolled ? "shadow-md" : "shadow-sm",
       )}
     >
-      <div className="container-narrow flex h-14 items-center justify-between md:h-16">
-        <Link to="/" className="flex items-center gap-2.5 group">
+      <div className="container-narrow flex h-24 items-center justify-between md:h-32">
+        <Link to="/" className="flex items-center gap-3 group">
           <img
             src={logoAsset}
             alt="Trois Glaze"
-            className={cn(
-              "h-10 md:h-12 w-auto transition-all duration-300 drop-shadow-sm",
-              scrolled ? "brightness-[0.25]" : "brightness-110",
-            )}
-            width={48}
-            height={48}
+            className="h-20 md:h-28 w-auto transition-all duration-300"
+            width={112}
+            height={112}
           />
           <div className="flex flex-col leading-none">
-            <span className={cn("font-display font-bold text-base md:text-xl tracking-[0.15em]", scrolled ? "text-navy" : "text-white")}>
+            <span className="font-display font-bold text-2xl md:text-4xl tracking-[0.15em] text-navy whitespace-nowrap">
               TROIS GLAZE
             </span>
-            <span className="text-[9px] md:text-[10px] font-medium tracking-[0.25em] mt-0.5 text-gold">
-              FACADES · FENESTRATION · LOUVRES
+            <span className="text-[9px] md:text-[11px] font-medium tracking-[0.25em] mt-1 pl-3 text-foreground">
+              FACADE | FENESTRATION | LOUVRES
             </span>
           </div>
         </Link>
+
 
         <nav className="hidden lg:flex items-center gap-1">
           {NAV.map((item) => (
             <Link
               key={item.to}
               to={item.to}
-              className={cn(
-                "relative px-3 py-2 font-medium transition-colors rounded-md text-sm",
-                scrolled ? "text-foreground/80 hover:text-navy" : "text-white/90 hover:text-white",
-              )}
+              className="relative px-3 py-2 font-medium transition-colors rounded-md text-sm text-navy/80 hover:text-navy"
               activeProps={{ className: "!text-gold" }}
               activeOptions={{ exact: item.to === "/" }}
             >
@@ -77,10 +70,7 @@ export function Header() {
         <div className="hidden lg:flex items-center gap-3">
           <a
             href="tel:+919820618036"
-            className={cn(
-              "flex items-center gap-2 text-sm font-medium transition-colors",
-              scrolled ? "text-foreground/80 hover:text-navy" : "text-white/90 hover:text-white",
-            )}
+            className="flex items-center gap-2 text-sm font-medium transition-colors text-navy/80 hover:text-navy"
           >
             <Phone className="size-4" />
             <span>+91 98206 18036</span>
@@ -92,10 +82,7 @@ export function Header() {
 
         <button
           onClick={() => setOpen((s) => !s)}
-          className={cn(
-            "lg:hidden grid size-10 place-items-center rounded-md",
-            scrolled ? "hover:bg-muted text-foreground" : "hover:bg-white/10 text-white",
-          )}
+          className="lg:hidden grid size-10 place-items-center rounded-md text-navy hover:bg-navy/10"
           aria-label={open ? "Close menu" : "Open menu"}
         >
           {open ? <X className="size-5" /> : <Menu className="size-5" />}
@@ -103,20 +90,14 @@ export function Header() {
       </div>
 
       {open && (
-        <div className={cn(
-          "lg:hidden border-t backdrop-blur-xl",
-          scrolled ? "border-border bg-background/95" : "border-white/10 bg-navy/95",
-        )}>
+        <div className="lg:hidden border-t border-sky-200 bg-sky backdrop-blur-xl">
           <nav className="container-narrow flex flex-col py-4">
             {NAV.map((item) => (
               <Link
                 key={item.to}
                 to={item.to}
                 onClick={() => setOpen(false)}
-                className={cn(
-                  "py-3 text-base font-medium",
-                  scrolled ? "text-foreground/80 hover:text-navy" : "text-white/80 hover:text-white",
-                )}
+                className="py-3 text-base font-medium text-navy/80 hover:text-navy"
                 activeProps={{ className: "!text-gold" }}
                 activeOptions={{ exact: item.to === "/" }}
               >

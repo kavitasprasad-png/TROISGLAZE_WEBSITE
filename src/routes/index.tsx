@@ -84,7 +84,7 @@ function Home() {
 
         <div className="container-narrow relative pt-24 pb-16">
           <div className="max-w-3xl text-navy-foreground">
-            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[1.05] tracking-tight max-w-3xl animate-slide-in-left">
+            <h1 className="font-display text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.05] tracking-tight max-w-3xl animate-slide-in-left">
               "<span className="text-gold">Crafting the Skin of Modern Technology</span>"
             </h1>
 

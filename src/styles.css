@@ -47,6 +47,7 @@
   --color-navy-light: var(--navy-light);
   --color-brand: var(--brand);
   --color-cyan: var(--cyan);
+  --color-sky: var(--sky);
   --color-gold: var(--gold);
   --color-gold-foreground: var(--gold-foreground);
 }
@@ -62,6 +63,7 @@
   --gold: oklch(0.78 0.13 82);             /* Luxury gold */
   --gold-foreground: oklch(0.2 0.02 100);
   --cyan: oklch(0.60 0.08 245);              /* Blue shade alias */
+  --sky: oklch(0.82 0.08 245);              /* Sky blue background */
 
   --background: oklch(1 0 0);
   --foreground: oklch(0.18 0.01 100);       /* charcoal #1B1B1B */
