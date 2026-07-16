@@ -8,10 +8,10 @@ import logoAsset from "@/assets/logo.png";
 const NAV = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
-  { to: "/our-process", label: "Our Process" },
+  { to: "/our-process", label: "Process" },
   { to: "/services", label: "Services" },
   
-  { to: "/our-edge", label: "Our Edge" },
+  { to: "/our-edge", label: "Edge" },
   { to: "/contact", label: "Contact" },
 ] as const;
 
