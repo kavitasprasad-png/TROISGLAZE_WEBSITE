@@ -293,7 +293,7 @@ function Services() {
             to="/our-process"
             className="ml-auto inline-flex items-center gap-1.5 text-navy hover:text-gold transition-colors font-medium story-link"
           >
-            <Wrench className="size-4" /> Installation Process
+            <Wrench className="size-4" />  Process
           </Link>
         </div>
       </section>
