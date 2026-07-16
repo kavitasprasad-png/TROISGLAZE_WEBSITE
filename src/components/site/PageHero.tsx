@@ -52,7 +52,7 @@ export function PageHero({ eyebrow, title, description, children, image, imageAl
             {eyebrow}
           </div>
         )}
-        <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold max-w-5xl leading-[1.05]">{title}</h1>
+        <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold max-w-5xl leading-[1.05]">{title}</h1>
         {description && (
           <p className="mt-5 text-base md:text-lg text-navy-foreground/75 max-w-2xl leading-relaxed">{description}</p>
         )}
