@@ -86,7 +86,7 @@ function About() {
       <section className="py-24 md:py-32 bg-surface">
         <div className="container-narrow">
           <SectionHeader title="Our Commitment" size="small" />
-          <div className="mt-16 max-w-2xl mx-auto space-y-6">
+              <div className="mt-16 grid md:grid-cols-3 gap-6"></div>
             {commitments.map((c) => (
               <div key={c.t} className="flex gap-6 items-start p-6 bg-card border-l-4 border-gold hover:shadow-lift transition-shadow">
                 <div className="shrink-0 size-14 border border-gold/50 rotate-45 grid place-items-center">
