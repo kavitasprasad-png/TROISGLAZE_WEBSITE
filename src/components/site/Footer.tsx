@@ -41,7 +41,7 @@ export function Footer() {
             </p>
             <div className="flex gap-3 mt-4">
               <a
-                href="https://www.linkedin.com/company/136106181/admin/dashboard/"
+                href="https://www.linkedin.com/company/troisglaze/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
