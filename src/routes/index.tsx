@@ -31,7 +31,6 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: "Technology-driven façade engineering company delivering innovative curtain walls, glazing, aluminium windows and architectural façade solutions." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://troisglaze.com/" },
-     
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Trois Glaze | Premium Facade Engineering Solutions" },
       { name: "twitter:description", content: "Technology-driven façade engineering company delivering innovative curtain walls, glazing, aluminium windows and architectural façade solutions." },
