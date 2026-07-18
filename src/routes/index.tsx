@@ -24,11 +24,21 @@ import about from "@/assets/about.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Trois Glaze — Crafting the skin of Modern Architecture" },
-      { name: "description", content: "Trois Glaze — technology-driven façade engineering company delivering end-to-end solutions in Facades, Fenestration and Louvres." },
-      { property: "og:title", content: "Trois Glaze — Crafting the skin of Modern Architecture" },
-      { property: "og:description", content: "Premium façade, fenestration and louvre solutions engineered for iconic buildings." },
+      { title: "Trois Glaze | Facade Engineering, Aluminium Windows & Glass Facades" },
+      { name: "description", content: "Trois Glaze is a technology-driven façade engineering company specializing in curtain walls, aluminium windows, louvers, ACP cladding, structural glazing, glass facades and complete fenestration solutions across India." },
+      { name: "keywords", content: "Facade Engineering, Curtain Wall, Aluminium Windows, Structural Glazing, Glass Facade, ACP Cladding, Louvres, Fenestration, Mumbai" },
+      { property: "og:title", content: "Trois Glaze | Premium Facade Engineering Solutions" },
+      { property: "og:description", content: "Technology-driven façade engineering company delivering innovative curtain walls, glazing, aluminium windows and architectural façade solutions." },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://troisglaze.com/" },
+     
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Trois Glaze | Premium Facade Engineering Solutions" },
+      { name: "twitter:description", content: "Technology-driven façade engineering company delivering innovative curtain walls, glazing, aluminium windows and architectural façade solutions." },
+    
+      { name: "theme-color", content: "#0D1B2A" },
     ],
+   
   }),
   component: Home,
 });
@@ -85,7 +95,7 @@ function Home() {
         <div className="container-narrow relative pt-24 pb-16">
           <div className="max-w-3xl text-navy-foreground">
             <h1 className="font-display text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.05] tracking-tight max-w-3xl animate-slide-in-left">
-              "<span className="text-gold">Crafting the Skin of Modern Technology</span>"
+              "<span className="text-gold">Crafting the Skin of Modern Architecture</span>"
             </h1>
 
             <p className="mt-6 text-lg md:text-xl lg:text-2xl text-navy-foreground/90 max-w-2xl leading-relaxed font-light">
